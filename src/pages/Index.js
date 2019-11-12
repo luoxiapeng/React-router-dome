@@ -12,11 +12,15 @@ class Index extends Component {
             {cid:456,title:'个人博客3'},
           ]
          }
+        
+    }
+    componentDidMount() {
+      // this.props.history.push('/home/')
     }
     render() { 
       return ( 
         <div>
-          <Redirect to="/home/" />
+          {/* <Redirect to="/home/" /> */}
           <ul>
             {
               this.state.list.map((item,index)=>{
