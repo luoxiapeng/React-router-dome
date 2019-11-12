@@ -5,8 +5,13 @@ class List extends Component {
         super(props);
         this.state = {  }
     }
+    componentDidMount() {
+      console.log(this.props.match)
+      let tempId=this.props.match.params.id
+      this.setState({id:tempId })
+    }
     render() { 
-        return (  <h2>List Page</h2> );
+        return (  <h2>List Page{this.state.id}</h2> );
     }
 }
  
